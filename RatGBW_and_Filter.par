@@ -1,9 +1,0 @@
-[SAPEC]
-Out=v1;
-NumOut=1
-Comp=Cfilter;Cgbw;Rfilter;Rgbw;$;$;
-Val=1;1;1;1;-1;1;
-GrNum=0;
-NtNum=1;
-GrDen=2
-NtDen=5

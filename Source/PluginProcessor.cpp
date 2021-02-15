@@ -191,7 +191,7 @@ void RATAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::Mi
     float dt = 1.0f / (current_sample_rate * slew_over_sampler.getOversamplingFactor());
     float vmax = slew_rate * dt;
 
-    auto slew_block = slew_over_sampler.processSamplesUp(audio_block);
+    /*auto slew_block = slew_over_sampler.processSamplesUp(audio_block);
     auto slew_block_ptr = slew_block.getChannelPointer(0);
     
     float psample = slew_block_ptr[0] < -vcc ? -vcc : (vcc < slew_block_ptr[0]) ? vcc : slew_block_ptr[0];
@@ -207,7 +207,7 @@ void RATAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::Mi
 		psample += dv;
         slew_block_ptr[i] = psample;
 	}
-    slew_over_sampler.processSamplesDown(audio_block);
+    slew_over_sampler.processSamplesDown(audio_block);*/
 
     // Process the gain bandwidth filter
     opamp_gbw.process(context);

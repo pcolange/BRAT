@@ -16,7 +16,11 @@ class KnobLookAndFeel : public LookAndFeel_V4
 public:
 	KnobLookAndFeel() {
 		File desktop = File::getSpecialLocation(File::SpecialLocationType::userDesktopDirectory);
-		File knob_image_file = desktop.getFullPathName() + "/JUCEProjects/TubeScreamer/Media/knob_ts808.png";
+		
+		File knob_bg_file = desktop.getFullPathName() + "/JUCEProjects/RAT/Media/RATKnobBG.png";
+		knob_bg_img = ImageCache::getFromFile(knob_bg_file);
+		
+		File knob_image_file = desktop.getFullPathName() + "/JUCEProjects/RAT/Media/RATKnob.png";
 		knob_img = ImageCache::getFromFile(knob_image_file);
 	}
 
@@ -25,24 +29,31 @@ public:
 
 		if (knob_img.isValid())
 		{
-			const double rotation = (slider.getValue()
-				- slider.getMinimum())
-				/ (slider.getMaximum()
-					- slider.getMinimum());
+			const double rotation = (slider.getValue() - slider.getMinimum()) / (slider.getMaximum() - slider.getMinimum());
 
-			const int frames = knob_img.getHeight() / knob_img.getWidth();
-			const int frameId = (int)ceil(rotation * ((double)frames - 1.0));
-			const float radius = jmin(width / 2.0f, height / 2.0f);
+			const int   frames  = knob_img.getHeight() / knob_img.getWidth();
+			const int   frameId = (int)ceil(rotation * ((double)frames - 1.0));
+			const float radius  = jmin(width / 2.0f, height / 2.0f);
 			const float centerX = x + width * 0.5f;
 			const float centerY = y + height * 0.5f;
-			const float rx = centerX - radius - 1.0f;
-			const float ry = centerY - radius;
+			const float rx      = centerX - radius - 1.0f;
+			const float ry      = centerY - radius;
 
 			float min = -145.0f * MathConstants<float>::pi / 180.0f;
 			float max = 145.0f * MathConstants<float>::pi / 180.0f;
 			float rad = jmap<float>(static_cast<float>(slider.getValue() / slider.getMaximum()), min, max);
 
 			AffineTransform rotator;
+
+			g.drawImage(knob_bg_img,
+				(int)rx,
+				(int)ry,
+				2 * (int)radius,
+				2 * (int)radius,
+				0,
+				frameId * knob_img.getWidth(),
+				knob_img.getWidth(),
+				knob_img.getWidth());
 
 			g.addTransform(rotator.rotated(rad, (float)(centerX), (float)(centerY)));
 
@@ -71,6 +82,7 @@ public:
 	}
 
 	Image knob_img;
+	Image knob_bg_img;
 
 };
 

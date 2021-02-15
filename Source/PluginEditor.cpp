@@ -38,7 +38,7 @@ RATAudioProcessorEditor::RATAudioProcessorEditor (RATAudioProcessor& p, AudioPro
 
     addAndMakeVisible(dist_value_label);
     dist_value_label.setText(String::toDecimalStringWithSignificantFigures(dist_slider.getValue() * 10.0, 2), NotificationType::dontSendNotification);
-    dist_value_label.setFont(Font("Segoe UI", 20.0f, 1));
+    dist_value_label.setFont(Font("Segoe UI", 28.0f, 1));
     dist_value_label.setColour(Label::ColourIds::textColourId, Colours::white);
     dist_value_label.setJustificationType(Justification::centred);
 
@@ -59,7 +59,7 @@ RATAudioProcessorEditor::RATAudioProcessorEditor (RATAudioProcessor& p, AudioPro
 
     addAndMakeVisible(filter_label);
     filter_label.setText("FILTER", juce::NotificationType::dontSendNotification);
-    filter_label.setFont(Font("Segoe UI", 24.0f, 1));
+    filter_label.setFont(Font("Segoe UI", 28.0f, 1));
     filter_label.setColour(Label::ColourIds::textColourId, Colours::white);
     filter_label.setJustificationType(Justification::centred);
 
@@ -95,7 +95,6 @@ RATAudioProcessorEditor::RATAudioProcessorEditor (RATAudioProcessor& p, AudioPro
     vol_value_label.setColour(Label::ColourIds::textColourId, Colours::white);
     vol_value_label.setJustificationType(Justification::centred);
 
-
 }
 
 RATAudioProcessorEditor::~RATAudioProcessorEditor()
@@ -105,10 +104,11 @@ RATAudioProcessorEditor::~RATAudioProcessorEditor()
 //==============================================================================
 void RATAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    Font logo_font = Font("Bebas Neue", 128.0f, Font::plain);
+    Font logo_font = Font("Saira", 164.0f, Font::plain);
+    logo_font.setExtraKerningFactor(0.10f);
     String NAME("RAT");
 
-	g.fillAll(juce::Colour::fromRGB(48, 46, 47));
+	g.fillAll(juce::Colour::fromRGB(34, 34, 34));
 
     g.setColour(juce::Colours::white);
 
@@ -125,12 +125,16 @@ void RATAudioProcessorEditor::paint (juce::Graphics& g)
 
     float text_area_w = getWidth() * 0.80f;
     float text_area_h = getHeight() * 0.25f;
-    float text_area_y = getHeight() * 0.025f;
+//    float text_area_y = getHeight() * 0.025f;
+    float text_area_y = getHeight() * 0.5f;
+
+    Rectangle<float> logo_border(ts_x-20.0f, text_area_y, text_width+20.0f, text_area_h);
 
     g.setOpacity(0.9f);
 	g.drawRoundedRectangle(border, 10.0f, 15.0f);
     g.setColour(Colours::white);
     g.drawText(NAME, ts_x, text_area_y, text_area_w, text_area_h, Justification::left);
+    g.drawRect(logo_border, 5.0f);
 }
 
 void RATAudioProcessorEditor::resized()
@@ -139,39 +143,39 @@ void RATAudioProcessorEditor::resized()
     // subcomponents in your editor..
     auto r = getLocalBounds();
 
-    int knob_y_offset = 100;
+    int knob_y_offset = 175;
     int knob_x_outer = 25;
 
     dist_slider.setSize(150, 150);
-    dist_slider.setCentrePosition(r.getWidth() / 4 - knob_x_outer, r.getHeight() / 3 + knob_y_offset);
+    dist_slider.setCentrePosition(r.getWidth() / 4 - knob_x_outer, knob_y_offset);
 
-    dist_label.setSize(100, 50);
+    dist_label.setSize(150, 50);
     dist_label.setCentrePosition(dist_slider.getX() + dist_slider.getWidth() / 2,
-        dist_slider.getY() + dist_slider.getHeight() + 10);
+        dist_slider.getY() - 25);
 
-    dist_value_label.setSize(50, 50);
+    /*dist_value_label.setSize(50, 50);
     dist_value_label.setCentrePosition(dist_slider.getX() + dist_slider.getWidth() / 2,
-        dist_slider.getY() - 10);
+        dist_slider.getY() - 10);*/
 
     filter_slider.setSize(150, 150);
-    filter_slider.setCentrePosition(r.getWidth() / 2, r.getHeight() / 3 + knob_y_offset);
+    filter_slider.setCentrePosition(r.getWidth() / 2, knob_y_offset);
 
     filter_label.setSize(100, 50);
     filter_label.setCentrePosition(filter_slider.getX() + filter_slider.getWidth() / 2,
-        filter_slider.getY() + filter_slider.getHeight() + 10);
+        filter_slider.getY() - 25);
 
-    filter_value_label.setSize(50, 50);
+    /*filter_value_label.setSize(50, 50);
     filter_value_label.setCentrePosition(filter_slider.getX() + filter_slider.getWidth() / 2,
-        filter_slider.getY() - 10);
+        filter_slider.getY() - 10);*/
 
     vol_slider.setSize(150, 150);
-    vol_slider.setCentrePosition(r.getWidth() * 3 / 4 + knob_x_outer, r.getHeight() / 3 + knob_y_offset);
+    vol_slider.setCentrePosition(r.getWidth() * 3 / 4 + knob_x_outer, knob_y_offset);
 
-    vol_label.setSize(90, 50);
+    vol_label.setSize(100, 50);
     vol_label.setCentrePosition(vol_slider.getX() + vol_slider.getWidth() / 2,
-        vol_slider.getY() + vol_slider.getHeight() + 10);
+        vol_slider.getY() - 25);
 
-    vol_value_label.setSize(50, 50);
+  /*  vol_value_label.setSize(50, 50);
     vol_value_label.setCentrePosition(vol_slider.getX() + vol_slider.getWidth() / 2,
-        vol_slider.getY() - 10);
+        vol_slider.getY() - 10);*/
 }

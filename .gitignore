@@ -13,6 +13,14 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+# I believe these were coming from LTSPICE
+*.crc
+*.fdt
+*.out
+*.par
+*.sch
+
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
