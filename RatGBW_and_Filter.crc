@@ -1,0 +1,8 @@
+C:\Users\phili\Desktop\JUCEProjects\RAT\RatGBW_and_Filter.sch
+V1 1 0 1 1
+Rgbw 2 1 1 0
+Rfilter 4 2 1 0
+Cgbw 0 2 1 0
+Cfilter 0 4 1 0
+.OUT 4
+.END

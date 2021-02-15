@@ -1,0 +1,12 @@
+v1:
+
++ (  +1 )
++ (  C1 Rf + C1 R1 + C2 Rf + C2 R2 + Cf Rf ) s
++ (  C2 C1 R2 Rf + C2 C1 R1 Rf + C2 C1 R1 R2 + Cf C1 R1 Rf + Cf C2 R2 Rf ) s^2
++ (  Cf C2 C1 R1 R2 Rf ) s^3
+------------------------------------------------------------------------------
++ (  +1 )
++ (  C1 R1 + C2 R2 + Cf Rf ) s
++ (  C2 C1 R1 R2 + Cf C1 R1 Rf + Cf C2 R2 Rf ) s^2
++ (  Cf C2 C1 R1 R2 Rf ) s^3
+

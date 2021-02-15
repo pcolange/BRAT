@@ -1,0 +1,15 @@
+C:\Users\phili\Desktop\JUCEProjects\RAT\RatCircuitFIlters.sch
+Cf 5 2 1 0
+R2 2 4 1 0
+Rf 5 2 1 0
+O1 5 0 2 1
+V1 1 0 1 1
+R1 2 3 1 0
+C1 3 0 1 0
+C2 4 0 1 0
+Rhp 6 5 1 0
+Chp 0 6 1 0
+Rtone 7 6 1 0
+Ctone 0 7 1 0
+.OUT 7
+.END

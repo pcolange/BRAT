@@ -1,0 +1,11 @@
+C:\Users\phili\Desktop\JUCEProjects\RAT\RatCircuitFIltersTest.sch
+Cf 6 3 1 0
+R2 3 5 1 0
+Rf 6 3 1 0
+O1 6 0 3 2
+V1 2 0 1 1
+R1 3 4 1 0
+C1 4 0 1 0
+C2 5 0 1 0
+.OUT 6
+.END

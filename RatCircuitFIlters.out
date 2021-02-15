@@ -1,0 +1,14 @@
+v1:
+
++ (  +1 )
++ (  C1 Rf + C1 R1 + C2 Rf + C2 R2 + Cf Rf ) s
++ (  C2 C1 R2 Rf + C2 C1 R1 Rf + C2 C1 R1 R2 + Cf C1 R1 Rf + Cf C2 R2 Rf ) s^2
++ (  Cf C2 C1 R1 R2 Rf ) s^3
+------------------------------------------------------------------------------
++ (  +1 )
++ (  C1 R1 + C2 R2 + Cf Rf + Chp Rhp + Ctone Rtone + Ctone Rhp ) s
++ (  C2 C1 R1 R2 + Cf C1 R1 Rf + Chp C1 R1 Rhp + Ctone C1 R1 Rtone + Ctone C1 R1 Rhp + Cf C2 R2 Rf + Chp C2 R2 Rhp + Ctone C2 R2 Rtone + Ctone C2 R2 Rhp + Chp Cf Rf Rhp + Ctone Cf Rf Rtone + Ctone Cf Rf Rhp + Ctone Chp Rhp Rtone ) s^2
++ (  Cf C2 C1 R1 R2 Rf + Chp C2 C1 R1 R2 Rhp + Ctone C2 C1 R1 R2 Rtone + Ctone C2 C1 R1 R2 Rhp + Chp Cf C1 R1 Rf Rhp + Ctone Cf C1 R1 Rf Rtone + Ctone Cf C1 R1 Rf Rhp + Ctone Chp C1 R1 Rhp Rtone + Chp Cf C2 R2 Rf Rhp + Ctone Cf C2 R2 Rf Rtone + Ctone Cf C2 R2 Rf Rhp + Ctone Chp C2 R2 Rhp Rtone + Ctone Chp Cf Rf Rhp Rtone ) s^3
++ (  Chp Cf C2 C1 R1 R2 Rf Rhp + Ctone Cf C2 C1 R1 R2 Rf Rtone + Ctone Cf C2 C1 R1 R2 Rf Rhp + Ctone Chp C2 C1 R1 R2 Rhp Rtone + Ctone Chp Cf C1 R1 Rf Rhp Rtone + Ctone Chp Cf C2 R2 Rf Rhp Rtone ) s^4
++ (  Ctone Chp Cf C2 C1 R1 R2 Rf Rhp Rtone ) s^5
+
