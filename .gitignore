@@ -346,3 +346,14 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/BRAT.jucer
+/Builds/VisualStudio2019/BRAT.sln
+/Builds/VisualStudio2019/BRAT_SharedCode.vcxproj
+/Builds/VisualStudio2019/BRAT_SharedCode.vcxproj.filters
+/Builds/VisualStudio2019/BRAT_StandalonePlugin.vcxproj
+/Builds/VisualStudio2019/BRAT_StandalonePlugin.vcxproj.filters
+/Builds/VisualStudio2019/BRAT_VST3.vcxproj
+/Builds/VisualStudio2019/BRAT_VST3.vcxproj.filters
+/Builds/VisualStudio2019/resources.rc
+/JuceLibraryCode/JuceHeader.h
+/JuceLibraryCode/JucePluginDefines.h
