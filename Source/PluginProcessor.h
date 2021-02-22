@@ -124,13 +124,13 @@ private:
     float slew_rate = 235E3f;
 
     // Opamp filter section 
-    float R1 = 47;
-    float R2 = 560;
-    float Rf = 100E3;
+    float R1 = 47.0f;
+    float R2 = 560.0f;
+    float Rf = 100E3f;
     float Rpar = (R1 * R2 / (R1 + R2));
-    float C1 = 2.2E-6;
-    float C2 = 4.7E-6;
-    float Cf = 100E-12;
+    float C1 = 2.2E-6f;
+    float C2 = 4.7E-6f;
+    float Cf = 100E-12f;
 
     // Filter section
     float Rfilter = 100.0E3f;
