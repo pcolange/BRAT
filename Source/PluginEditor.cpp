@@ -74,13 +74,10 @@ RATAudioProcessorEditor::RATAudioProcessorEditor (RATAudioProcessor& p, AudioPro
 
     addAndMakeVisible(distSlider);
     addAndMakeVisible(distLabel);
-    addAndMakeVisible(distValueLabel);
     addAndMakeVisible(filterSlider);
     addAndMakeVisible(filterLabel);
-    addAndMakeVisible(filterValueLabel);
     addAndMakeVisible(volSlider);
     addAndMakeVisible(volLabel);
-    addAndMakeVisible(volValueLabel);
 }
 
 RATAudioProcessorEditor::~RATAudioProcessorEditor()

@@ -87,11 +87,6 @@ public:
 	{
 		Path p;
 		
-	/*	p.addBubble (body.reduced (0.5f), 
-					 body.getUnion (Rectangle<float> (tip.x, tip.y, 1.0f, 1.0f)),
-					 tip, 5.0f, jmin (15.0f, body.getWidth() * 0.2f, body.getHeight() * 0.2f));*/
-		
-		// I think the body has to do where the text is
 		int rectWidth = body.getWidth();
 		int rectHeight = body.getHeight();
 		int rectX = body.getX();
@@ -135,17 +130,14 @@ private:
     
 	Slider distSlider;
     Label distLabel;
-    Label distValueLabel;
     std::unique_ptr<AudioProcessorValueTreeState::SliderAttachment> distAttachment;
 
     Slider filterSlider;
     Label filterLabel;
-    Label filterValueLabel;
     std::unique_ptr<AudioProcessorValueTreeState::SliderAttachment> filterAttachment;
 
     Slider volSlider;
     Label volLabel;
-    Label volValueLabel;
     std::unique_ptr<AudioProcessorValueTreeState::SliderAttachment> volAttachment;
     
     AudioProcessorValueTreeState& parameters;
